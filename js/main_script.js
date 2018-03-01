@@ -6,9 +6,9 @@ function generateSymbol(){
     return symbol;
 }
 
-function generateNumber(){
+function generateRandomNumber(minRange, maxRange){
 
-    return Math.floor(Math.random() * 10);
+    return minRange + Math.floor(Math.random() * (maxRange - minRange));
 }
 
 function generateCapitalLetter(){
@@ -39,7 +39,7 @@ function createSingleRandomChar(){
     var arrayOfChars = [];
 
     var symbol = generateSymbol();
-    var capitalLetter = generateNumber();
+    var capitalLetter = generateRandomNumber(0, 10);
     var smallLetter = generateSmallLetter();
     var number = generateCapitalLetter();
 
